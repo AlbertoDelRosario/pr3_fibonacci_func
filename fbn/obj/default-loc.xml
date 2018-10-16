@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file />
+    <file_marker column=" 24" line=" 7" >
+      <vfs_project />
+      <vfs_file>C:\Users\Alber\Desktop\pr3\Ada_Lab_01\src\use_fibo.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 57" line=" 15" >
+      <vfs_project />
+      <vfs_file>C:\Users\Alber\Desktop\pr3\Ada_Lab_01\src\fibonacci_functions.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\Alber\Desktop\pr3\Ada_Lab_01\src\fibonacci_functions.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\Alber\Desktop\pr3\Ada_Lab_01\src\fibonacci_functions.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 7" >
+      <vfs_project />
+      <vfs_file>C:\Users\Alber\Desktop\pr3\Ada_Lab_01\src\use_fibo.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 43" line=" 9" >
+      <vfs_project />
+      <vfs_file>C:\Users\Alber\Desktop\pr3\Ada_Lab_01\src\use_fibo.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 50" >
+      <vfs_project />
+      <vfs_file>C:\Users\Alber\Desktop\pr3\Ada_Lab_01\src\use_fibo.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 40" line=" 49" >
+      <vfs_project />
+      <vfs_file>C:\Users\Alber\Desktop\pr3\Ada_Lab_01\src\use_fibo.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 27" >
+      <vfs_project />
+      <vfs_file>C:\Users\Alber\Desktop\pr3\Ada_Lab_01\src\use_fibo.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 34" >
+      <vfs_project />
+      <vfs_file>C:\Users\Alber\Desktop\pr3\Ada_Lab_01\src\use_fibo.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 8" line=" 25" >
+      <vfs_project />
+      <vfs_file>C:\Users\Alber\Desktop\pr3\Ada_Lab_01\src\use_fibo.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 23" >
+      <vfs_project />
+      <vfs_file>C:\Users\Alber\Desktop\pr3\Ada_Lab_01\src\use_fibo.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 10" line=" 10" >
+      <vfs_project>C:\Users\Alber\Desktop\pr3\fbn\default.gpr</vfs_project>
+      <vfs_file>C:\Users\Alber\Desktop\pr3\fbn\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Alber\Desktop\pr3\fbn\default.gpr</vfs_project>
+      <vfs_file>C:\Users\Alber\Desktop\pr3\fbn\src\fbn.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Alber\Desktop\pr3\fbn\default.gpr</vfs_project>
+      <vfs_file>C:\Users\Alber\Desktop\pr3\fbn\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 8" >
+      <vfs_project>C:\Users\Alber\Desktop\pr3\fbn\default.gpr</vfs_project>
+      <vfs_file>C:\Users\Alber\Desktop\pr3\fbn\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Alber\Desktop\pr3\fbn\default.gpr</vfs_project>
+      <vfs_file>C:\Users\Alber\Desktop\pr3\fbn\src\use_fibo.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

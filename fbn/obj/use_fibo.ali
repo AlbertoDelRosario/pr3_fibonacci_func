@@ -1,0 +1,86 @@
+V "GNAT Lib v2018"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U use_fibo%b		use_fibo.adb		5041f7d3 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W fibonacci_functions%s	fibonacci_functions.adb	fibonacci_functions.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+D ada.ads		20180524051736 76789da1 ada%s
+D a-charac.ads		20180524051736 2d3ec45b ada.characters%s
+D a-chlat1.ads		20180524051736 66457d31 ada.characters.latin_1%s
+D a-except.ads		20180524051736 291912d5 ada.exceptions%s
+D a-ioexce.ads		20180524051736 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
+D a-string.ads		20180524051736 90ac6797 ada.strings%s
+D a-strfix.ads		20180524051738 d07c346e ada.strings.fixed%s
+D a-strmap.ads		20180524051736 e8bb714a ada.strings.maps%s
+D a-tags.ads		20180524051738 491b781d ada.tags%s
+D a-textio.ads		20180524051738 881db35a ada.text_io%s
+D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
+D fibonacci_functions.ads  20181016095214 f43e0f6d fibonacci_functions%s
+D interfac.ads		20180524051736 5ab55268 interfaces%s
+D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
+D system.ads		20180524051738 32a08138 system%s
+D s-conca2.ads		20180524051736 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20180524051736 0ebbdb71 system.crtl%s
+D s-exctab.ads		20180524051738 54135002 system.exception_table%s
+D s-ficobl.ads		20180524051738 078245e4 system.file_control_block%s
+D s-imgint.ads		20180524051736 02dbe0c2 system.img_int%s
+D s-parame.ads		20180524051738 48ec542b system.parameters%s
+D s-secsta.ads		20180524051738 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20180524051736 a7318a92 system.soft_links%s
+D s-stache.ads		20180524051738 a37c21ec system.stack_checking%s
+D s-stalib.ads		20180524051738 09bd3940 system.standard_library%s
+D s-stoele.ads		20180524051738 2dc34a04 system.storage_elements%s
+D s-traent.ads		20180524051736 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180524051736 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20180524051738 1b7d22d2 system.wch_con%s
+D use_fibo.adb		20181016102648 fc1e7f8a use_fibo%b
+X 1 ada.ads
+16K9*Ada 20e8 31|1r6 1r23 2r6 2r29 48r40
+X 7 a-string.ads
+16K13*Strings 35e16 31|2r10 2r33 48r44
+33n24*Left{33E9} 31|48r52
+X 8 a-strfix.ads
+18K21*Fixed 251e22 31|2w18 2r41
+195V13*Trim{string} 31|48s11
+X 11 a-textio.ads
+49K13*Text_IO 471e16 31|1w10 1r27
+166U14*New_Line 31|20s4 35s4 44s4
+242U14*Put 31|15s7 17s34 23s4 24s4 25s4 27s4 38s4 39s4 40s4 42s4 48s7
+263U14*Put_Line 31|11s4 12s4 21s4 36s4 45s4
+X 13 fibonacci_functions.ads
+1K9*fibonacci_functions 18e24 31|3w6 5r8 9r11
+3A9*arrayOfInts(integer)<integer> 31|9r31
+5V13*fibo_get_value{integer} 31|14s16
+8V13*fibo_closest_value{integer} 31|26s13
+11V13*fibo_closest_position{integer} 31|41s13
+15V13*fibo_values_string{3A9} 31|46s12
+X 31 use_fibo.adb
+4U11*use_fibo 4b11 51l5 51t13
+6i4 value{integer} 14m7 15r11 26m4 27r8 41m4 42r8
+7i4 sample{integer} 24r8 26r32 39r8 41r35
+8i4 sample_length{positive} 9r46 13r16 17r15 46r31 48r69
+9a4 vect{13|3A9} 46m4 47r13 48r30
+13i8 j{integer} 14r31 17r10
+47i8 j{integer} 48r35 48r64
+

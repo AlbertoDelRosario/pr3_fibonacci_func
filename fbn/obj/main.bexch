@@ -1,0 +1,21 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\Alber\Desktop\pr3\fbn\default.gpr
+20181016102110
+[BOUND OBJECT FILES]
+C:\Users\Alber\Desktop\pr3\fbn\obj\fibonacci_functions.o
+C:\Users\Alber\Desktop\pr3\fbn\obj\use_fibo.o
+C:\Users\Alber\Desktop\pr3\fbn\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\Alber\Desktop\pr3\fbn\obj\
+-LC:\Users\Alber\Desktop\pr3\fbn\obj\
+-LC:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000
