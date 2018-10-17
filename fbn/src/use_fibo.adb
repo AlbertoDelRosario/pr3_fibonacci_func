@@ -4,7 +4,7 @@ with fibonacci_functions;
 procedure use_fibo is
    use fibonacci_functions;
    value : Integer;
-   sample : Integer := 50;
+   sample : Integer := 2;
    sample_length : Positive := 12;
    vect : fibonacci_functions.arrayOfInts(1..sample_length);
 begin
