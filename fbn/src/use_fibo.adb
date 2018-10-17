@@ -3,8 +3,10 @@ with Ada.Strings.Fixed; use Ada.Strings.Fixed;
 with fibonacci_functions;
 procedure use_fibo is
    use fibonacci_functions;
+   fiboValue : Integer := 55;
+   noFiboValue : Integer := 56;
    value : Integer;
-   sample : Integer := 2;
+   sample : Integer := 73;
    sample_length : Positive := 12;
    vect : fibonacci_functions.arrayOfInts(1..sample_length);
 begin
@@ -47,5 +49,18 @@ begin
    for j in vect'Range loop
       Put(Trim(Integer'Image(vect(j)), Ada.Strings.Left) & (if j /= sample_length then ", " else " "));
    end loop;
+
+   New_Line;
+   Put_Line("-----is fibo value-----");
+   if fibo_is_fibo_value(fiboValue) = True then
+      Put_Line("55 pertenece a la sucesion");
+   else
+      Put_Line("El metodo no funciona");
+   end if;
+   if fibo_is_fibo_value(noFiboValue) = False then
+      Put_Line("56 no pertenece a la sucesion");
+   else
+      Put_Line("El metodo no funciona");
+   end if;
    
 end use_fibo;

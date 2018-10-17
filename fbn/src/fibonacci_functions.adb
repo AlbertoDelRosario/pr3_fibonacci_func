@@ -21,29 +21,24 @@ with SPARK_Mode => On is
    end fibo_get_value;
 --------------------------------------------------------------------------------  
    function fibo_closest_value(value : Natural) return Natural is
-      index : Positive := 2;
-      fvalue : Natural;
+      index : Integer := 2;
    begin
-      if value < 2 then return 1;
+      if fibo_is_fibo_value(value) = True then
+	 return value;
+      end if;
+      while index <= 46 loop
+	 if value > fibo_get_value(index-1) and value < fibo_get_value(index) then
+   	    if abs (value - fibo_get_value(index-1)) < abs (fibo_get_value(index) - value) then
+	       return fibo_get_value(index-1);
+	    else 
+	       return fibo_get_value(index);
+	    end if;
          end if;
-      loop 
-	 if index >= 47 then
-	    return 1836311903;
-	 end if;
-         fvalue :=  fibo_get_value(index);
-         if value <= fvalue then 
-            if fvalue - value < value - fibo_get_value(index - 1) then 
-               return fvalue;
-            elsif index > 1 then
-               return fibo_get_value(index - 1);
-            else
-               return fvalue;
-            end if; 
-         end if;
-         index := index + 1;
+	 index := index + 1;
 	 pragma Loop_Variant(Increases => index);
-	 pragma Loop_Invariant(value /= fvalue);
+	 pragma Loop_Invariant(value > fibo_get_value(index));
       end loop;
+      return 0;
    end fibo_closest_value;
 --------------------------------------------------------------------------------   
    function fibo_closest_position(value : Natural) return Positive is 
@@ -65,8 +60,22 @@ with SPARK_Mode => On is
       for j in result_array'Range loop
          result_array(j) := fibo_get_value(j);
 	 pragma Loop_Invariant(for all k in 1..j => 
-			  result_array(k) = fibo_get_value(k));
+			          result_array(k) = fibo_get_value(k));
       end loop;      
       return result_array;
-   end fibo_values_string;   
+   end fibo_values_string;  
+--------------------------------------------------------------------------------
+   function fibo_is_fibo_value (value : Positive) return Boolean is
+      index : Positive := 1;
+   begin
+      while fibo_get_value(index) <= value loop
+	 if fibo_get_value(index) = value then
+	    return true;
+	 end if;
+	 index := index + 1;
+	 pragma Loop_Variant (Increases => index);
+	 pragma Loop_Invariant (fibo_get_value(index) <= value);
+      end loop;
+      return False;
+   end fibo_is_fibo_value;   
 end fibonacci_functions;

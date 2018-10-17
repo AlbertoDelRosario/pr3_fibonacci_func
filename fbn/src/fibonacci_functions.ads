@@ -17,7 +17,8 @@ is
    with
        Pre =>
 	 value <= 1836311903,
-       Post => True;
+       Post => 
+	 fibo_closest_value'Result < 1836311903;
      
    function fibo_closest_position (value : Natural) return Positive;
    --Devuelve la posición del valor más cercano dentro de la 
@@ -32,4 +33,16 @@ is
          (for all J in fibo_values_string'Result'Range =>
 	    fibo_values_string'Result(J) = fibo_get_value(J));
 
+   function fibo_is_fibo_value (value : Positive) return Boolean
+   --Devuelve True si el valor es un valor de la sucesion de fibonacci
+   with
+       Pre =>
+	 value <= 1836311903,
+       Post =>
+	 (if fibo_is_fibo_value'Result = True then
+           (for some J in 1 .. 46 =>
+             fibo_get_value(J) = value)
+          else
+           (for all J in 1 .. 46 =>
+             fibo_get_value(J) /= value));
 end fibonacci_functions;
