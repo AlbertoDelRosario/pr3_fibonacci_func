@@ -1,0 +1,31 @@
+{
+  "spark": [
+    {
+      "name": "test_fibonacci_functions",
+      "sloc": [
+        {
+          "file": "test_fibonacci_functions.adb",
+          "line": 5
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 1.29743199795485E-03,
+    "globals (basic)": 1.11672291532159E-02,
+    "globals/properties (advanced)": 1.97568275034428E-02,
+    "flow analysis": 7.40210016374476E-05,
+    "codepeer results": 4.36800019087968E-06,
+    "init_why_sections": 2.27159995120019E-04,
+    "translation of standard": 3.51102510467172E-03,
+    "translation of compilation unit": 3.90455015003681E-02,
+    "proof": 2.18400009543984E-06
+  }
+}

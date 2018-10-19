@@ -1,0 +1,23 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+I:\alberto datos\uni\2018-19\PR3\pr3_fibonacci_func-master\fbn\default.gpr
+20181019060444
+[BOUND OBJECT FILES]
+I:\alberto datos\uni\2018-19\PR3\pr3_fibonacci_func-master\fbn\obj\fibonacci_functions.o
+I:\alberto datos\uni\2018-19\PR3\pr3_fibonacci_func-master\fbn\obj\use_fibo.o
+I:\alberto datos\uni\2018-19\PR3\pr3_fibonacci_func-master\fbn\obj\test_assertions.o
+I:\alberto datos\uni\2018-19\PR3\pr3_fibonacci_func-master\fbn\obj\test_fibonacci_functions.o
+I:\alberto datos\uni\2018-19\PR3\pr3_fibonacci_func-master\fbn\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LI:\alberto datos\uni\2018-19\PR3\pr3_fibonacci_func-master\fbn\obj\
+-LI:\alberto datos\uni\2018-19\PR3\pr3_fibonacci_func-master\fbn\obj\
+-LC:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000

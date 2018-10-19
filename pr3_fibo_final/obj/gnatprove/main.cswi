@@ -1,0 +1,7 @@
+20181019144454
+-c
+-x
+ada
+-gnatA
+-gnatc
+-gnates=I:\alberto datos\uni\2018-19\PR3\pr3_fibonacci_func-master\fbn\obj\gnatprove\aae21ffb.tmp

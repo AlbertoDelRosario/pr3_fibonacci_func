@@ -1,0 +1,21 @@
+[GENERATED OBJECT FILE]
+b__test_fibonacci_functions.o
+[PROJECT FILES]
+I:\alberto datos\uni\2018-19\PR3\pr3_fibo_final\default.gpr
+20181019160246
+[BOUND OBJECT FILES]
+I:\alberto datos\uni\2018-19\PR3\pr3_fibo_final\obj\fibonacci_functions.o
+I:\alberto datos\uni\2018-19\PR3\pr3_fibo_final\obj\test_assertions.o
+I:\alberto datos\uni\2018-19\PR3\pr3_fibo_final\obj\test_fibonacci_functions.o
+[GENERATED SOURCE FILES]
+b__test_fibonacci_functions.ads
+b__test_fibonacci_functions.adb
+b__test_fibonacci_functions.ali
+[RESULTING OPTIONS]
+-LI:\alberto datos\uni\2018-19\PR3\pr3_fibo_final\obj\
+-LI:\alberto datos\uni\2018-19\PR3\pr3_fibo_final\obj\
+-LC:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000

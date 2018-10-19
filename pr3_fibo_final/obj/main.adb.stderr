@@ -1,0 +1,2 @@
+test_fibonacci_functions.adb:5:35: missing ";"
+test_fibonacci_functions.adb:6:04: end of file expected, file can have only one compilation unit

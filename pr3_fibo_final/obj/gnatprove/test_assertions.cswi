@@ -1,0 +1,7 @@
+20181019162624
+-c
+-x
+ada
+-gnatA
+-gnatc
+-gnates=I:\alberto datos\uni\2018-19\PR3\pr3_fibo_final\obj\gnatprove\85638c12.tmp

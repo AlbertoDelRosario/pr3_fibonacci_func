@@ -1,0 +1,31 @@
+{
+  "spark": [
+    {
+      "name": "use_fibo",
+      "sloc": [
+        {
+          "file": "use_fibo.adb",
+          "line": 4
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 2.01676995493472E-03,
+    "globals (basic)": 1.07667883858085E-02,
+    "globals/properties (advanced)": 2.15799305588007E-02,
+    "flow analysis": 7.37779992050491E-05,
+    "codepeer results": 4.12600002164254E-06,
+    "init_why_sections": 2.14297004276887E-04,
+    "translation of standard": 3.41807398945093E-03,
+    "translation of compilation unit": 6.57809376716614E-02,
+    "proof": 2.66999995801598E-06
+  }
+}

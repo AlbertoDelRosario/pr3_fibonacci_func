@@ -1,0 +1,77 @@
+V "GNAT Lib v2018"
+M P W=b
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U use_fibo%b		use_fibo.adb		f28b798a OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W fibonacci_functions%s	fibonacci_functions.adb	fibonacci_functions.ali
+Z system%s		system.ads		system.ali
+
+D ada.ads		20180524051736 76789da1 ada%s
+D a-charac.ads		20180524051736 2d3ec45b ada.characters%s
+D a-chlat1.ads		20180524051736 66457d31 ada.characters.latin_1%s
+D a-ioexce.ads		20180524051736 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
+D a-string.ads		20180524051736 90ac6797 ada.strings%s
+D a-strfix.ads		20180524051738 d07c346e ada.strings.fixed%s
+D a-strmap.ads		20180524051736 e8bb714a ada.strings.maps%s
+D a-textio.ads		20180524051738 881db35a ada.text_io%s
+D fibonacci_functions.ads  20181019144110 5e39fffe fibonacci_functions%s
+D interfac.ads		20180524051736 5ab55268 interfaces%s
+D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
+D system.ads		20180524051738 32a08138 system%s
+D s-crtl.ads		20180524051736 0ebbdb71 system.crtl%s
+D s-ficobl.ads		20180524051738 078245e4 system.file_control_block%s
+D s-parame.ads		20180524051738 48ec542b system.parameters%s
+D s-unstyp.ads		20180524051736 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20180524051738 1b7d22d2 system.wch_con%s
+D use_fibo.adb		20181019143618 f4d30140 use_fibo%b
+X 1 ada.ads
+16K9*Ada 20e8 19|1r6 1r23 2r6 2r29 35r40
+X 6 a-string.ads
+16K13*Strings 35e16 19|2r10 2r33 35r44
+33n24*Left{33E9} 19|35r52
+X 7 a-strfix.ads
+18K21*Fixed 251e22 19|2w18 2r41
+195V13*Trim{string} 19|35s11
+X 9 a-textio.ads
+49K13*Text_IO 471e16 19|1w10 1r27
+166U14*New_Line 19|22s4 31s4 38s4
+242U14*Put 19|17s7 19s34 25s4 26s4 27s4 29s4 35s7
+263U14*Put_Line 19|13s4 14s4 23s4 32s4 39s4 41s7 43s7 46s7 48s7
+X 10 fibonacci_functions.ads
+1K9*fibonacci_functions 46e24 19|3w6 5r8 11r11
+5A9*arrayOfInts(integer)<integer> 19|11r31
+7V13*fibo_get_value{natural} 19|16s16
+16V13*fibo_closest_value{natural} 19|28s13
+26V13*fibo_values_string{5A9} 19|33s12
+35V13*fibo_is_fibo_value{boolean} 19|40s7 45s7
+X 19 use_fibo.adb
+4U11*use_fibo 4b11 51l5 51t13
+6i4 fiboValue{integer} 40r26
+7i4 noFiboValue{integer} 45r26
+8i4 value{integer} 16m7 17r11 28m4 29r8
+9i4 sample{integer} 26r8 28r32
+10i4 sample_length{positive} 11r46 15r16 19r15 33r31 35r69
+11a4 vect{10|5A9} 33m4 34r13 35r30
+15i8 j{integer} 16r31 19r10
+34i8 j{integer} 35r35 35r64
+
+QQ SPARKVERSION 2018 (20180523)
+GG EK_DIRECT_CALLS use_fibo 0
+GG EK_GLOBALS use_fibo local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 8 ada__text_io__new_line__2 ada__text_io__put__4 ada__text_io__put_line__2 ada__strings__fixed__trim fibonacci_functions__fibo_get_value fibonacci_functions__fibo_closest_value fibonacci_functions__fibo_values_string fibonacci_functions__fibo_is_fibo_value local_var 0 FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_END_MARKER
