@@ -15,45 +15,36 @@ with SPARK_Mode => On is
 	    else
 	       return 1836311903;
             end if;
+            Pragma Loop_Invariant (aux1 <= 1836311903);
+            Pragma Loop_Invariant (aux1 > 0);
          end loop;
       end if;
       return aux1;
    end fibo_get_value;
 --------------------------------------------------------------------------------  
-   function fibo_closest_value(value : Natural) return Natural is
-      index : Integer := 2;
-   begin
-      if fibo_is_fibo_value(value) = True then
-	 return value;
-      end if;
-      while index <= 46 loop
-	 if value > fibo_get_value(index-1) and value < fibo_get_value(index) then
-   	    if abs (value - fibo_get_value(index-1)) < abs (fibo_get_value(index) - value) then
-	       return fibo_get_value(index-1);
-	    else 
-	       return fibo_get_value(index);
-	    end if;
-         end if;
-	 index := index + 1;
-	 pragma Loop_Variant(Increases => index);
-	 pragma Loop_Invariant(value > fibo_get_value(index));
-      end loop;
-      return 0;
-   end fibo_closest_value;
---------------------------------------------------------------------------------   
-   function fibo_closest_position(value : Natural) return Positive is 
-      index : Positive := 1;
-      cvalue : Natural;
-   begin
-      cvalue := fibo_closest_value(value);
-      loop 
-         if cvalue = fibo_get_value(index) then 
-            return index;
-         end if;
-         index := index + 1;
-      end loop;
-   end fibo_closest_position;
---------------------------------------------------------------------------------   
+--     function fibo_closest_value(value : Natural) return Natural is
+--        index : Positive := 2;
+--     begin
+--        if fibo_is_fibo_value(value) = True then
+--  	 return value;
+--        end if;
+--        while index <= 46 and index > 1 loop
+--  	 if value > fibo_get_value(index-1) and value < fibo_get_value(index) then
+--     	    if abs (value - fibo_get_value(index-1)) < abs (fibo_get_value(index) - value) then
+--  	       return fibo_get_value(index-1);
+--  	    else 
+--  	       return fibo_get_value(index);
+--  	    end if;
+--           end if;
+--           pragma Loop_Variant(Increases => index);
+--           pragma Loop_Invariant(for all J in 2 .. index => value /= fibo_get_value(J)
+--                                 and index < 47);
+--           
+--  	 index := index + 1;
+--        end loop;
+--        return 1836311903;
+--     end fibo_closest_value;
+--  --------------------------------------------------------------------------------   
    function fibo_values_string(value : Positive) return arrayOfInts is
       result_array : arrayOfInts(1..value) := (others => 0);
    begin
@@ -64,18 +55,20 @@ with SPARK_Mode => On is
       end loop;      
       return result_array;
    end fibo_values_string;  
---------------------------------------------------------------------------------
-   function fibo_is_fibo_value (value : Positive) return Boolean is
-      index : Positive := 1;
-   begin
-      while fibo_get_value(index) <= value loop
-	 if fibo_get_value(index) = value then
-	    return true;
-	 end if;
-	 index := index + 1;
-	 pragma Loop_Variant (Increases => index);
-	 pragma Loop_Invariant (fibo_get_value(index) <= value);
-      end loop;
-      return False;
-   end fibo_is_fibo_value;   
+--  --------------------------------------------------------------------------------
+--     function fibo_is_fibo_value (value : Natural) return Boolean is
+--        index : Positive := 1;
+--     begin
+--        while index <= 46 and then fibo_get_value(index) <= value loop
+--  	 if fibo_get_value(index) = value then
+--              return True;
+--  	 end if;
+--           pragma Loop_Variant (Increases => index);
+--           pragma Loop_Invariant (for all j in 1 .. index =>
+--                                    fibo_get_value(j) <= value);
+--           pragma Loop_Invariant (index < 47);
+--  	 index := index + 1;
+--        end loop;
+--        return False;
+--     end fibo_is_fibo_value;   
 end fibonacci_functions;
