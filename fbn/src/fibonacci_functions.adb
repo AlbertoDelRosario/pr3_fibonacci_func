@@ -22,28 +22,31 @@ with SPARK_Mode => On is
       return aux1;
    end fibo_get_value;
 --------------------------------------------------------------------------------  
---     function fibo_closest_value(value : Natural) return Natural is
---        index : Positive := 2;
---     begin
---        if fibo_is_fibo_value(value) = True then
---  	 return value;
---        end if;
---        while index <= 46 and index > 1 loop
---  	 if value > fibo_get_value(index-1) and value < fibo_get_value(index) then
---     	    if abs (value - fibo_get_value(index-1)) < abs (fibo_get_value(index) - value) then
---  	       return fibo_get_value(index-1);
---  	    else 
---  	       return fibo_get_value(index);
---  	    end if;
---           end if;
---           pragma Loop_Variant(Increases => index);
---           pragma Loop_Invariant(for all J in 2 .. index => value /= fibo_get_value(J)
---                                 and index < 47);
---           
---  	 index := index + 1;
---        end loop;
---        return 1836311903;
---     end fibo_closest_value;
+   function fibo_closest_value(value : Natural) return Natural is
+      aux : Natural;
+      pastAux : Natural;
+   begin
+      aux := fibo_get_value(2);
+      pastAux := fibo_get_value(1);
+      for J in 3 .. 46 loop
+	 if aux /= value then
+	    if aux > value then
+	       if abs(pastAux - value) > abs(aux - value) then
+		  return aux;
+	       else 
+		  return pastAux;
+	       end if;
+	    end if;
+	 else
+	    return aux;
+	 end if;
+	 pastAux := aux;
+	 aux := fibo_get_value(J);
+	 pragma Loop_Invariant(for all K in 3 .. J =>
+		                  fibo_get_value(K) <= aux);
+      end loop;
+      return 1836311903;
+   end fibo_closest_value;
 --  --------------------------------------------------------------------------------   
    function fibo_values_string(value : Positive) return arrayOfInts is
       result_array : arrayOfInts(1..value) := (others => 0);
