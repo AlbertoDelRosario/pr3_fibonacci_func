@@ -6,7 +6,7 @@ procedure use_fibo is
    fiboValue : Integer := 1;
    noFiboValue : Integer := 0;
    value : Integer;
-   sample : Integer := 10;
+   sample : Integer := 5;
    sample_length : Positive := 12;
    vect : fibonacci_functions.arrayOfInts(1..sample_length);
 begin
@@ -35,17 +35,17 @@ begin
       Put(Trim(Integer'Image(vect(j)), Ada.Strings.Left) & (if j /= sample_length then ", " else " "));
    end loop;
 
---     New_Line;
---     Put_Line("-----is fibo value-----");
---     if fibo_is_fibo_value(fiboValue) = True then
---        Put_Line("1 pertenece a la sucesion");
---     else
---        Put_Line("El metodo no funciona");
---     end if;
---     if fibo_is_fibo_value(noFiboValue) = False then
---        Put_Line("0 no pertenece a la sucesion");
---     else
---        Put_Line("El metodo no funciona");
---     end if;
+   New_Line;
+   Put_Line("-----is fibo value-----");
+   if fibo_is_fibo_value(fiboValue) = True then
+      Put_Line("1 pertenece a la sucesion");
+   else
+      Put_Line("El metodo no funciona");
+   end if;
+   if fibo_is_fibo_value(noFiboValue) = False then
+      Put_Line("0 no pertenece a la sucesion");
+   else
+      Put_Line("El metodo no funciona");
+   end if;
    
 end use_fibo;

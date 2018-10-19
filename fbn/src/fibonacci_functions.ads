@@ -21,7 +21,7 @@ is
          and then value > 0,
        Post => 
          fibo_closest_value'Result <= 1836311903
-         and then fibo_closest_value'Result > 0;  
+         and then fibo_closest_value'Result >= 1;  
      
    function fibo_values_string (value : Positive) return arrayOfInts
    --Devuelve un vector con la sucesión de fibonacci extendida hasta "value"
@@ -32,17 +32,15 @@ is
          (for all J in fibo_values_string'Result'Range =>
 	    fibo_values_string'Result(J) = fibo_get_value(J));
 
---     function fibo_is_fibo_value (value : Natural) return Boolean
---     --Devuelve True si el valor es un valor de la sucesion de fibonacci
---     with
---         Pre =>
---           value <= 1836311903
---           and then value > 0,
---         Post =>
---  	 (if fibo_is_fibo_value'Result = True then
---             (for some J in 1 .. 46 =>
---               fibo_get_value(J) = value)
---            else
---             (for all J in 1 .. 46 =>
---               fibo_get_value(J) /= value));
+   function fibo_is_fibo_value (value : Natural) return Boolean
+   --Devuelve True si el valor es un valor de la sucesion de fibonacci
+   with
+       Pre =>
+         value <= 1836311903
+         and then value > 0,
+       Post =>
+	 (if fibo_is_fibo_value'Result = True then
+           (for some J in 1 .. 46 =>
+             fibo_get_value(J) = value));
+          
 end fibonacci_functions;
